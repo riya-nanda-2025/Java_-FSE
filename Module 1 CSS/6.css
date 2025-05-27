@@ -1,0 +1,92 @@
+/* General / Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+#mainHeader {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#mainHeader h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none; /* Remove bullets from nav menus */
+    background-color: rgba(44, 62, 80, 0.9);
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 5px 0; /* Add padding to list items for spacing */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+/* Link Styling */
+a:link {
+    color: #3498db; /* A vibrant blue */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+a:visited {
+    color: #8e44ad; /* A subtle purple for visited links */
+}
+
+a:hover {
+    color: #2980b9; /* Slightly darker blue on hover */
+    text-decoration: underline;
+}
+
+a:active {
+    color: #c0392b; /* A red color when active */
+}
+
+/* Body and Global Typography Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.8;
+    color: #34495e;
+    background-image: url('https://via.placeholder.com/1920x1080/ecf0f1/2c3e50?text=City+Background');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-color: #ecf0f1;
+}
+
+/* Generic List Styles (for non-nav lists) */
+ul {
+    list-style-type: square; /* Example: square bullets */
+    list-style-position: outside;
+    padding-left: 25px; /* Adjust as needed */
+    margin-bottom: 15px;
+}
+
+ul li {
+    margin-bottom: 8px; /* Spacing between list items */
+    padding: 2px 0;
+}
+
+/* ... (rest of the CSS) ... */

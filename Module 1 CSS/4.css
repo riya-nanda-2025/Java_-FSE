@@ -1,0 +1,86 @@
+/* General / Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+#mainHeader {
+    background-color: #2c3e50; /* Dark blue-grey (HEX) */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    background-color: rgba(44, 62, 80, 0.9); /* Dark blue-grey with transparency (RGBA) */
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+}
+
+/* Body and Global Typography Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #34495e; /* Darker blue-grey text (HEX) */
+    background-image: url('https://via.placeholder.com/1920x1080/ecf0f1/2c3e50?text=City+Background'); /* Light grey background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-color: #ecf0f1; /* Fallback color for body background */
+}
+
+/* Section H2 Headings Styles */
+h2 {
+    color: #2980b9; /* Bright blue (HEX) */
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+    background: linear-gradient(to right, #e74c3c, #f1c40f); /* Red to Yellow gradient */
+    -webkit-background-clip: text; /* For text gradient */
+    background-clip: text;
+    color: transparent; /* Makes the text transparent to show gradient */
+}
+
+/* Event Card Styles */
+.eventCard {
+    background-color: rgba(255, 255, 255, 0.9); /* White with transparency (RGBA) */
+    border: 1px solid rgba(189, 195, 199, 0.5); /* Light grey with transparency (RGBA) */
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ... (rest of the CSS) ... */
+
+/* Article section header gradient */
+.news-bulletin h2 {
+    background: linear-gradient(to right, #3498db, #2ecc71); /* Blue to Green gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Table section header gradient */
+.admin-table h2 {
+    background: linear-gradient(to right, #9b59b6, #e67e22); /* Purple to Orange gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}

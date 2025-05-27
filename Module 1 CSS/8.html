@@ -1,0 +1,49 @@
+<p class="hidden-element">This text is hidden but still occupies space.</p>
+    <p class="none-element">This text is completely gone and takes no space.</p>
+    ```
+
+---
+
+### 9. Multiple Columns in Text
+
+**Scenario:** The community bulletin needs to be displayed like a newspaper.
+**Objective:** Use CSS3 multi-column layout.
+
+**`styles.css` (continued, additions and modifications):**
+
+```css
+/* General / Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ... (previous styles) ... */
+
+/* News Article Section Styles (for multi-columns) */
+.news-bulletin {
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.article-content {
+    column-count: 2; /* Two columns */
+    column-gap: 30px; /* 30px gap between columns */
+    column-rule: 1px solid gray; /* A 1px solid gray rule between columns */
+    text-align: justify;
+}
+
+.article-content h3 {
+    column-span: all; /* Make the heading span all columns */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #2c3e50;
+}
+
+/* ... (rest of the CSS) ... */

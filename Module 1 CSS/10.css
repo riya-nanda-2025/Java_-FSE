@@ -1,0 +1,129 @@
+/* ... (all previous CSS) ... */
+
+/* Responsive Web Design with Media Queries */
+
+/* Small screens (e.g., phones) */
+@media (max-width: 768px) {
+    /* Navigation links vertically instead of horizontally */
+    nav ul li {
+        display: block; /* Stack vertically */
+        margin: 10px 0; /* Add more vertical spacing */
+    }
+
+    nav ul {
+        padding: 10px 0;
+    }
+
+    /* Reduce image sizes (applies to background image here, but could be for <img> elements) */
+    body {
+        background-size: auto; /* Adjust background size for smaller screens */
+        background-position: top center;
+    }
+
+    /* Reduce font sizes */
+    #mainHeader h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .eventCard h3 {
+        font-size: 1.3em;
+    }
+
+    .eventCard p, .article-content p {
+        font-size: 0.95em;
+    }
+
+    /* Multi-column layout for news article */
+    .article-content {
+        column-count: 1; /* Single column on small screens */
+        column-gap: 0;
+        column-rule: none;
+    }
+
+    /* Flexible layouts using % and vw/vh */
+    main {
+        padding: 0 10px; /* Reduce main padding */
+    }
+
+    .eventCard {
+        margin: 10px 5vw; /* Use vw for horizontal margin */
+        padding: 15px;
+    }
+
+    .admin-table {
+        margin: 20px 2vw;
+    }
+
+    .contact-form {
+        margin: 20px 5vw;
+        padding: 20px;
+    }
+}
+
+/* Medium screens (e.g., tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #mainHeader h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .eventCard {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .article-content {
+        column-count: 2; /* Keep two columns */
+        column-gap: 20px;
+    }
+}
+
+/* Bonus: Flexbox for responsive navigation (optional, but good practice) */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    nav ul li {
+        width: 100%; /* Make list items take full width */
+        text-align: center;
+        margin: 5px 0;
+    }
+}
+
+/* Bonus: Flexbox for event cards (optional) */
+.event-listing {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: center; /* Center cards horizontally */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+}
+
+.eventCard {
+    flex: 1 1 calc(33% - 40px); /* Roughly 3 cards per row, adjust for gap */
+    max-width: 350px; /* Maximum width for each card */
+    min-width: 280px; /* Minimum width for each card */
+}
+
+@media (max-width: 768px) {
+    .eventCard {
+        flex: 1 1 90%; /* One card per row on small screens */
+        max-width: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .eventCard {
+        flex: 1 1 calc(50% - 40px); /* Two cards per row on medium screens */
+    }
+}

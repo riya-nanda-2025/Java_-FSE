@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f0f8ff; /* Fallback for background image */
+        }
+    </style>
+</head>
+<body>
+    <header id="mainHeader">
+        <h1 style="color: red;">Welcome to the Community Portal</h1> </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="event-listing">
+            <h2>Upcoming Events</h2>
+            <div class="eventCard">
+                <h3>Summer Fair</h3>
+                <p>Join us for a fun-filled Summer Fair with games, food, and music.</p>
+            </div>
+            <div class="eventCard">
+                <h3>Community Clean-up</h3>
+                <p>Help us keep our community clean and green!</p>
+            </div>
+        </section>
+
+        <section class="news-bulletin">
+            <h2>Community News</h2>
+            <div class="article-content">
+                <h3>New Park Opens</h3>
+                <p>The city's newest park is now open to the public, offering a variety of recreational facilities.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </section>
+
+        <section class="admin-table">
+            <h2>Event Administration</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Annual Picnic</td>
+                        <td>2025-07-15</td>
+                        <td>Central Park</td>
+                    </tr>
+                    <tr>
+                        <td>Town Hall Meeting</td>
+                        <td>2025-08-01</td>
+                        <td>Community Hall</td>
+                    </tr>
+                    <tr>
+                        <td>Food Festival</td>
+                        <td>2025-09-10</td>
+                        <td>Market Square</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <form class="contact-form">
+            <h2>Contact Us</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Local Community Event Portal</p>
+    </footer>
+</body>
+</html>

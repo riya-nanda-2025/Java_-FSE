@@ -1,0 +1,196 @@
+/* General / Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+/* Style for the main portal header */
+#mainHeader {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Navigation Styles */
+/* Styles for the main navigation menu */
+nav ul {
+    list-style-type: none;
+    background-color: #444;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Individual navigation list items */
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/* Styles for navigation links */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+}
+
+/* Body and Global Typography Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-image: url('https://via.placeholder.com/1920x1080/f0f8ff/000000?text=Community+Background'); /* Placeholder image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+/* Section H2 Headings Styles */
+/* Styles for all H2 elements across the portal */
+h2 {
+    color: #0056b3;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Event Card Styles */
+/* Styling for individual event containers */
+.eventCard {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for main CTA button */
+.cta-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Grouped Styles for H3 and P elements */
+/* Common styles for all h3 and p tags */
+h3, p {
+    margin-bottom: 10px;
+}
+
+/* Link Styles */
+a:link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #663399; /* A shade of purple */
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #ff4500; /* Orange-red */
+}
+
+/* List Styles */
+ul {
+    padding-left: 20px;
+    list-style-position: inside;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Form Styles */
+.contact-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: 2px solid transparent; /* Default outline for normal state */
+    transition: outline-color 0.3s ease; /* Smooth transition for outline */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline-color: #007bff; /* Highlight on focus */
+}
+
+.contact-form button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.contact-form button:hover {
+    background-color: #218838;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #333;
+    color: white;
+}

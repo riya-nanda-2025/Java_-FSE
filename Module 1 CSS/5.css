@@ -1,0 +1,109 @@
+/* General / Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+#mainHeader {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#mainHeader h1 {
+    font-family: 'Montserrat', sans-serif; /* Applied to the main heading */
+    font-size: 2.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    background-color: rgba(44, 62, 80, 0.9);
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+/* Body and Global Typography Styles */
+body {
+    font-family: 'Open Sans', sans-serif; /* Default font for body */
+    line-height: 1.8; /* Increased for better readability */
+    color: #34495e;
+    background-image: url('https://via.placeholder.com/1920x1080/ecf0f1/2c3e50?text=City+Background');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-color: #ecf0f1;
+}
+
+/* Section H2 Headings Styles */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2980b9;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2.2em;
+    text-transform: capitalize; /* Capitalize each word */
+    background: linear-gradient(to right, #e74c3c, #f1c40f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Event Card Styles */
+.eventCard {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(189, 195, 199, 0.5);
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.eventCard h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.eventCard p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-style: italic; /* Italicize descriptions */
+    text-align: justify; /* Justify text */
+    letter-spacing: 0.5px; /* Slightly increase letter spacing */
+    line-height: 1.7; /* Adjust line height */
+}
+
+/* Article content styling */
+.article-content p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    text-align: justify;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
+}
+
+/* ... (rest of the CSS) ... */

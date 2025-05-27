@@ -1,0 +1,19 @@
+Open index.html in your web browser.
+Open Developer Tools:
+Chrome/Edge/Firefox: Right-click anywhere on the page and select "Inspect" or "Inspect Element", or press F12 (Windows) / Cmd + Opt + I (Mac).
+Simulate Different Screen Sizes (Device Toolbar):
+In Chrome DevTools, look for the "Toggle device toolbar" icon (it looks like a small phone and tablet) near the top left of the DevTools window. Click it.
+You'll see a responsive mode where you can drag the edges of the viewport to resize it or select predefined device sizes from a dropdown (e.g., "iPhone SE", "iPad Air").
+Test: As you resize, observe how your navigation, event cards, and news article columns change. Does the layout break? Do elements overlap?
+Inspect Applied Styles:
+While in the device toolbar mode, use the "Elements" tab in DevTools.
+Click the "Select an element in the page to inspect it" icon (arrow cursor) or Ctrl + Shift + C (Windows) / Cmd + Shift + C (Mac).
+Click on specific elements (e.g., a navigation link, an event card, a paragraph in the news section).
+In the "Styles" pane (usually on the right), you'll see all the CSS rules applied to that element, including inherited styles and styles from media queries. You can check the checkboxes next to properties to enable/disable them live, or double-click values to edit them and see immediate changes. This is invaluable for tweaking values on the fly.
+Debug: If a layout breaks, inspect the affected elements. Check their margin, padding, width, height, and display properties. Look at the computed box model in the "Computed" tab to understand how space is being taken up.
+Check External CSS Loading (Network Tab):
+Go to the "Network" tab in DevTools.
+Refresh the page (Ctrl + R or Cmd + R).
+Look for styles.css in the list of loaded resources.
+Verify: Ensure its status is 200 OK (meaning it loaded successfully). If you see an error (e.g., 404 Not Found), it means your HTML link to the stylesheet is incorrect or the file path is wrong.
+This helps confirm that your external stylesheet is being correctly applied.
