@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon-Only Buttons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .icon-btn {
+            font-size: 1.2rem; /* Adjust icon size */
+            padding: 0.5rem 0.75rem; /* Adjust padding for icon-only buttons */
+        }
+        .icon-btn span {
+            /* Hide text visually but keep for screen readers */
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Icon-Only Buttons</h2>
+
+        <div class="mb-3">
+            <button type="button" class="btn btn-primary me-2 icon-btn">
+                <i class="bi bi-plus-lg"></i> <span>Add</span>
+            </button>
+            <button type="button" class="btn btn-success me-2 icon-btn">
+                <i class="bi bi-check-lg"></i> <span>Save</span>
+            </button>
+            <button type="button" class="btn btn-danger me-2 icon-btn">
+                <i class="bi bi-trash"></i> <span>Delete</span>
+            </button>
+            <button type="button" class="btn btn-info me-2 icon-btn">
+                <i class="bi bi-info-circle"></i> <span>Info</span>
+            </button>
+        </div>
+
+        <div class="mb-3">
+            <button type="button" class="btn btn-outline-secondary me-2 icon-btn">
+                <i class="bi bi-pencil"></i> <span>Edit</span>
+            </button>
+            <button type="button" class="btn btn-outline-dark me-2 icon-btn">
+                <i class="bi bi-gear"></i> <span>Settings</span>
+            </button>
+            <button type="button" class="btn btn-outline-warning me-2 icon-btn">
+                <i class="bi bi-exclamation-triangle"></i> <span>Warning</span>
+            </button>
+        </div>
+
+        <p class="mt-4">
+            For accessibility, it's often best to include a `<span>` with text that is visually hidden
+            (using Bootstrap's `visually-hidden` class, or custom CSS as shown) for screen readers,
+            even if the button is icon-only visually.
+        </p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

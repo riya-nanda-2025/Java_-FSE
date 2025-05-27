@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Display Utilities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .visibility-box {
+            background-color: #d1ecf1;
+            border: 1px solid #007bff;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Responsive Display Utilities</h2>
+        <p>Resize your browser window to see the content below appear and disappear.</p>
+
+        <div class="visibility-box d-none d-md-block">
+            <h3>Visible on Medium (md) and Up</h3>
+            <p>This box is hidden (`d-none`) by default, but visible as a block (`d-md-block`) on medium screens and larger.</p>
+        </div>
+
+        <div class="visibility-box d-none d-lg-flex flex-row justify-content-around">
+            <div class="p-2 border bg-light">Item 1</div>
+            <div class="p-2 border bg-light">Item 2</div>
+            <div class="p-2 border bg-light">Item 3</div>
+            <p class="mb-0 ms-3">This flex container is hidden (`d-none`) by default, but visible as a flexbox (`d-lg-flex`) on large screens and larger.</p>
+        </div>
+
+        <div class="visibility-box d-block d-md-none">
+            <h3>Visible Only on Extra Small and Small (below md)</h3>
+            <p>This box is visible as a block (`d-block`) on small screens, and hidden on medium screens and larger (`d-md-none`).</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+Locate _variables.scss:
+The core Bootstrap variables are located in node_modules/bootstrap/scss/_variables.scss. DO NOT modify this file directly.
+
+Create a custom variables file:
+In your scss/ folder, create a new file, e.g., scss/_my-custom-variables.scss.
+
+Override variables:
+In scss/_my-custom-variables.scss, define the variables you want to change before importing Bootstrap's main _variables.scss.
+
+Example content for scss/_my-custom-variables.scss:
+
+SCSS
+
+// Custom primary color
+$primary: #6f42c1; // A custom purple color
+
+// Custom border radius
+$border-radius: 0.75rem;
+$border-radius-sm: 0.5rem;
+$border-radius-lg: 1rem;
+
+// You can also override map values, for example, for theme colors
+// $theme-colors: (
+//   "primary": $primary,
+//   "secondary": #6c757d,
+//   "info": #17a2b8
+// );
+Modify scss/custom.scss to include your overrides:
+Update scss/custom.scss to import your custom variables before Bootstrap's _variables.scss and other components.
+
+SCSS
+
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+
+// Your custom variable overrides MUST go here BEFORE Bootstrap's default variables
+@import "my-custom-variables"; // Import your custom variables file
+
+// Now import Bootstrap's default variables (your overrides will take precedence)
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
+
+// Remaining Bootstrap imports
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/tables";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/button-group";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/accordion";
+@import "../node_modules/bootstrap/scss/breadcrumb";
+@import "../node_modules/bootstrap/scss/pagination";
+@import "../node_modules/bootstrap/scss/badge";
+@import "../node_modules/bootstrap/scss/alert";
+@import "../node_modules/bootstrap/scss/progress";
+@import "../node_modules/bootstrap/scss/list-group";
+@import "../node_modules/bootstrap/scss/close";
+@import "../node_modules/bootstrap/scss/toasts";
+@import "../node_modules/bootstrap/scss/modal";
+@import "../node_modules/bootstrap/scss/tooltip";
+@import "../node_modules/bootstrap/scss/popover";
+@import "../node_modules/bootstrap/scss/carousel";
+@import "../node_modules/bootstrap/scss/spinners";
+@import "../node_modules/bootstrap/scss/offcanvas";
+@import "../node_modules/bootstrap/scss/placeholders";
+
+// Helpers
+@import "../node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "../node_modules/bootstrap/scss/utilities/api";
+Recompile Sass:
+Run the Sass compiler again:
+
+Bash
+
+npx sass scss/custom.scss css/style.css
+Or if you're watching:
+
+Bash
+
+npx sass --watch scss/custom.scss css/style.css
+Verify in index.html:
+The primary colored elements (e.g., buttons, backgrounds) and rounded corners will now reflect your custom values.
+
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized Bootstrap 5 Sass</title>
+    <link rel="stylesheet" href="css/style.css"> <style>
+        .custom-rounded-box {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Customized Bootstrap 5</h1>
+        <p>The primary color and border-radius should now be customized based on your Sass variables.</p>
+
+        <button class="btn btn-primary">Custom Primary Button</button>
+        <button class="btn btn-outline-primary">Custom Primary Outline</button>
+
+        <div class="alert alert-primary mt-3" role="alert">
+            This alert also uses the custom primary color.
+        </div>
+
+        <div class="p-3 bg-secondary text-white custom-rounded-box rounded">
+            This box should have the new default border-radius from Sass.
+        </div>
+
+        <div class="p-3 bg-info text-white custom-rounded-box rounded-pill mt-3">
+            This box explicitly uses `rounded-pill` for full roundedness.
+        </div>
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

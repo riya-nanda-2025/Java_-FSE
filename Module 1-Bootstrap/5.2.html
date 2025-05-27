@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Reordering</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .col-reorder {
+            background-color: #ffeeba;
+            border: 1px solid #ffc107;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .col-reorder.first { background-color: #d1ecf1; border-color: #007bff; }
+        .col-reorder.second { background-color: #d4edda; border-color: #28a745; }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Column Reordering on Different Screen Sizes</h2>
+
+        <p>
+            Resize your browser window. On small screens (below `md`), "First Column" will appear before "Second Column".
+            On medium screens (`md`) and above, "Second Column" will appear first due to reordering classes.
+        </p>
+
+        <div class="row">
+            <div class="col-md-6 order-md-2">
+                <div class="col-reorder second">
+                    <h3>Second Column</h3>
+                    <p>This column will be second on medium screens and larger.</p>
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <div class="col-reorder first">
+                    <h3>First Column</h3>
+                    <p>This column will be first on medium screens and larger.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

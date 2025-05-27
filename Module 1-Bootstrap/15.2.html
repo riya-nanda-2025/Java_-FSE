@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows and Rounded Pills</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Cards with Shadows and Rounded Pills</h2>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Default Shadow</h5>
+                        <p class="card-text">This card has a subtle default shadow applied with the <code>.shadow</code> class.</p>
+                        <span class="badge bg-primary rounded-pill">New Feature</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Large Shadow</h5>
+                        <p class="card-text">This card has a larger, more prominent shadow applied with the <code>.shadow-lg</code> class.</p>
+                        <span class="badge bg-success rounded-pill">Available</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-5">More Shadow Examples:</h3>
+        <div class="d-flex justify-content-around mt-3">
+            <div class="p-4 bg-light rounded shadow-sm">Small Shadow</div>
+            <div class="p-4 bg-light rounded shadow-none">No Shadow</div>
+            <div class="p-4 bg-light rounded shadow">Default Shadow</div>
+            <div class="p-4 bg-light rounded shadow-lg">Large Shadow</div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+Create a project directory:
+
+Bash
+
+mkdir my-bootstrap-sass-project
+cd my-bootstrap-sass-project
+Initialize npm:
+
+Bash
+
+npm init -y
+Install Bootstrap and Sass:
+
+Bash
+
+npm install bootstrap@5.3.0 sass
+This installs Bootstrap (which includes its Sass source files) and the Sass compiler.
+
+Create your Sass file:
+Create a file named scss/custom.scss (or similar) in your project:
+
+my-bootstrap-sass-project/
+├── node_modules/
+├── scss/
+│   └── custom.scss
+└── index.html
+Add content to custom.scss:
+In scss/custom.scss, import Bootstrap's functions, variables, and then the rest of Bootstrap.
+
+SCSS
+
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
+
+// Your custom variable overrides go here
+// Example:
+// $primary: #ff6347; // Tomato color
+// $enable-rounded: false;
+
+// Remaining Bootstrap imports
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/tables";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/button-group";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/accordion";
+@import "../node_modules/bootstrap/scss/breadcrumb";
+@import "../node_modules/bootstrap/scss/pagination";
+@import "../node_modules/bootstrap/scss/badge";
+@import "../node_modules/bootstrap/scss/alert";
+@import "../node_modules/bootstrap/scss/progress";
+@import "../node_modules/bootstrap/scss/list-group";
+@import "../node_modules/bootstrap/scss/close";
+@import "../node_modules/bootstrap/scss/toasts";
+@import "../node_modules/bootstrap/scss/modal";
+@import "../node_modules/bootstrap/scss/tooltip";
+@import "../node_modules/bootstrap/scss/popover";
+@import "../node_modules/bootstrap/scss/carousel";
+@import "../node_modules/bootstrap/scss/spinners";
+@import "../node_modules/bootstrap/scss/offcanvas";
+@import "../node_modules/bootstrap/scss/placeholders";
+
+// Helpers
+@import "../node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "../node_modules/bootstrap/scss/utilities/api";
+Create an index.html:
+
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Sass Project</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Bootstrap 5 Sass Project</h1>
+        <p>This page is using Bootstrap compiled from Sass.</p>
+        <button class="btn btn-primary">Primary Button</button>
+        <button class="btn btn-secondary">Secondary Button</button>
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+Compile Sass:
+Open your terminal in the project root and run:
+
+Bash
+
+npx sass scss/custom.scss css/style.css
+This will compile custom.scss into css/style.css.
+For watching changes during development:
+
+Bash
+
+npx sass --watch scss/custom.scss css/style.css
