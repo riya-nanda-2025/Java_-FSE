@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+    <style>
+        #welcomeBanner {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #ffc107;
+            background-color: rgba(255, 255, 0, 0.2);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        /* Task 4 CSS */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .event-image {
+            border: 3px solid #007bff; /* Blue border */
+            padding: 5px;
+            border-radius: 8px;
+            width: 180px; /* Consistent width */
+            height: 120px; /* Consistent height */
+            object-fit: cover; /* Ensures images cover the area without distortion */
+            display: block; /* Removes extra space below image */
+            margin: 0 auto; /* Center image within cell */
+        }
+
+        .image-caption {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Local Community Event Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#registration">Register for Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="help.html" target="_blank">Help Document</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Your Community Portal!</h2>
+            <p>Your one-stop destination for local community events and services.</p>
+        </section>
+
+        <div id="welcomeBanner">
+            <p>Welcome, logged-in user! Don't miss our <span style="color: red; font-weight: bold;">special offer</span> on upcoming workshops!</p>
+        </div>
+
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <p>Check out our exciting lineup of community events!</p>
+            <p>These events are <span class="highlight">family-friendly</span> and offer a <span class="highlight">great opportunity</span> to connect with your neighbors.</p>
+
+            <h3>Past Event Gallery</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Community Fair</th>
+                        <th>Local Market</th>
+                        <th>Park Cleanup</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://via.placeholder.com/180x120?text=Community+Fair" alt="Attendees enjoying a community fair" title="Annual Community Fair Fun" class="event-image">
+                            <p class="image-caption">Our annual community fair, a day of joy!</p>
+                        </td>
+                        <td>
+                            <img src="https://via.placeholder.com/180x120?text=Local+Market" alt="Stalls at a local market" title="Weekly Local Market Delights" class="event-image">
+                            <p class="image-caption">Fresh produce and local crafts at the market.</p>
+                        </td>
+                        <td>
+                            <img src="https://via.placeholder.com/180x120?text=Park+Cleanup" alt="Volunteers cleaning a park" title="Community Park Cleanup Day" class="event-image">
+                            <p class="image-caption">Dedicated volunteers keeping our parks clean.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://via.placeholder.com/180x120?text=Art+Workshop" alt="Kids participating in an art workshop" title="Creative Art Workshop for Kids" class="event-image">
+                            <p class="image-caption">Young artists expressing themselves.</p>
+                        </td>
+                        <td>
+                            <img src="https://via.placeholder.com/180x120?text=Music+Festival" alt="Crowd enjoying a music festival" title="Summer Music Festival Vibes" class="event-image">
+                            <p class="image-caption">Live music and good vibes at the festival.</p>
+                        </td>
+                        <td>
+                            <img src="https://via.placeholder.com/180x120?text=Sports+Day" alt="Participants in a sports day event" title="Annual Community Sports Day" class="event-image">
+                            <p class="image-caption">Friendly competition on our annual sports day.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="registration">
+            <h2>Event Registration</h2>
+            </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions? Reach out to us!</p>
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Local City Council. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript will go here for interactivity in later tasks
+    </script>
+</body>
+</html>

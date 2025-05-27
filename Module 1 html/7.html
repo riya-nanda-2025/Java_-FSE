@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+    <style>
+        #welcomeBanner {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #ffc107;
+            background-color: rgba(255, 255, 0, 0.2);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .event-image {
+            border: 3px solid #007bff;
+            padding: 5px;
+            border-radius: 8px;
+            width: 180px;
+            height: 120px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+            transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+        }
+
+        .image-caption {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 8px;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 20px auto;
+            border: 1px solid #e0e0e0;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="date"],
+        form select,
+        form textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+
+        form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        form button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-right: 10px;
+        }
+
+        form button:hover {
+            background-color: #218838;
+        }
+
+        output {
+            display: block;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #28a745;
+            background-color: #e6ffe6;
+            color: #155724;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .feedback-message {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+
+        /* Task 7 CSS */
+        video {
+            display: block;
+            margin: 20px auto;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Local Community Event Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#registration">Register for Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="help.html" target="_blank">Help Document</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Your Community Portal!</h2>
+            <p>Your one-stop destination for local community events and services.</p>
+        </section>
+
+        <div id="welcomeBanner">
+            <p>Welcome, logged-in user! Don't miss our <span style="color: red; font-weight: bold;">special offer</span> on upcoming workshops!</p>
+        </div>
+
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <p>Check out our exciting lineup of community events!</p>
+            <p>These events are <span class="highlight">family-friendly</span> and offer a <span class="highlight">great opportunity</span> to connect with your neighbors.</p>
+
+            <h3>Past Event Gallery</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Community Fair</th>
+                        <th>Local Market</th>
+                        <th>Park Cleanup</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://via.placeholder.com/180x120?text=Community+Fair" alt="Attendees enjoying a community fair" title="Annual Community Fair Fun" class="event-image" ondblclick="enlargeImage(this)">
+                            <p class="image-caption">Our annual community fair, a day of joy!</p>
+                        </td>
+                        <td>
+                            <img src="https://via.placeholder.com/180x120?text=Local+Market" alt="Stalls at a local market" title="Weekly Local Market Delights" class="event-image" ondblclick="enlargeImage(this)">
+                            <p class="image-caption">Fresh produce and local crafts at the market.</p>
+                        </td>
+                        <td>
+                            <img src="https://via.placeholder.com/180x120?text=Park+Cleanup" alt="Volunteers cleaning a park" title="Community Park Cleanup Day" class="event-image" ondblclick="enlargeImage(this)">
+                            <p class="image-caption">Dedicated volunteers keeping our parks clean.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://via.placeholder.com/180x120?text=Art+Workshop" alt="Kids participating in an art workshop" title="Creative Art Workshop for Kids" class="event-image" ondblclick="enlargeImage(this)">
+                            <p class="image-caption">Young artists expressing themselves.</p>
+                        </td>
+                        <td>
+                            <img src="https://via.placeholder.com/180x120?text=Music+Festival" alt="Crowd enjoying a music festival" title="Summer Music Festival Vibes" class="event-image" ondblclick="enlargeImage(this)">
+                            <p class="image-caption">Live music and good vibes at the festival.</p>
+                        </td>
+                        <td>
+                            <img src="https://via.placeholder.com/180x120?text=Sports+Day" alt="Participants in a sports day event" title="Annual Community Sports Day" class="event-image" ondblclick="enlargeImage(this)">
+                            <p class="image-caption">Friendly competition on our annual sports day.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="registration">
+            <h2>Event Registration</h2>
+            <form id="eventRegistrationForm" onsubmit="event.preventDefault(); showConfirmation(event);">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g., Jane Doe" required autofocus>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="jane.doe@example.com" required>
+
+                <label for="phoneNumber">Phone Number (XXX-XXX-XXXX):</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" placeholder="e.g., 123-456-7890" onblur="validatePhoneNumber(this)">
+                <p class="feedback-message">Format: 123-456-7890 (optional)</p>
+
+                <label for="eventDate">Preferred Event Date:</label>
+                <input type="date" id="eventDate" name="eventDate" required>
+
+                <label for="eventType">Event Type:</label>
+                <select id="eventType" name="eventType" required onchange="displayEventFee(this)">
+                    <option value="">--Select an Event Type--</option>
+                    <option value="community_fair" data-fee="10.00">Community Fair</option>
+                    <option value="workshop" data-fee="25.00">Workshop</option>
+                    <option value="sports_day" data-fee="5.00">Sports Day</option>
+                    <option value="cultural_festival" data-fee="15.00">Cultural Festival</option>
+                    <option value="webinar" data-fee="0.00">Online Webinar (Free)</option>
+                </select>
+                <p id="eventFeeDisplay" class="feedback-message"></p>
+
+                <label for="message">Message/Special Requests:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Any special requests, accessibility needs, or comments?" onkeyup="countCharacters(this)"></textarea>
+                <p class="feedback-message">Characters typed: <span id="charCount">0</span></p>
+
+                <button type="submit" onclick="showSubmitConfirmation()">Register Now</button>
+
+                <output for="fullName email eventDate eventType message" id="registrationOutput"></output>
+            </form>
+
+            <h3>Event Promotion Video</h3>
+            <video id="promoVideo" width="480" height="270" controls oncanplay="showVideoReadyMessage()">
+                <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p id="videoStatus" class="feedback-message"></p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions? Reach out to us!</p>
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Local City Council. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Task 5 JavaScript
+        function showConfirmation(event) {
+            const form = event.target;
+            const output = document.getElementById('registrationOutput');
+
+            const fullName = form.fullName.value;
+            const email = form.email.value;
+            const eventType = form.eventType.options[form.eventType.selectedIndex].text;
+            const eventDate = form.eventDate.value;
+
+            if (fullName && email && eventType && eventDate) {
+                output.textContent = `Thank you, ${fullName}! You have successfully registered for the "${eventType}" event on ${eventDate}. A confirmation email will be sent to ${email}.`;
+                // Optionally, clear the form after submission
+                // form.reset();
+            } else {
+                output.textContent = 'Please fill in all required fields to register.';
+            }
+        }
+
+        // Task 6: Event Handling JavaScript
+        function validatePhoneNumber(input) {
+            const phoneNumber = input.value;
+            const regex = /^\d{3}-\d{3}-\d{4}$/;
+            if (phoneNumber === '') {
+                input.style.borderColor = '#ccc';
+                return;
+            }
+            if (!regex.test(phoneNumber)) {
+                alert('Please enter a valid phone number in the format XXX-XXX-XXXX (e.g., 123-456-7890)');
+                input.style.borderColor = 'red';
+                input.focus();
+            } else {
+                input.style.borderColor = 'green';
+            }
+        }
+
+        function displayEventFee(select) {
+            const selectedOption = select.options[select.selectedIndex];
+            const fee = selectedOption.getAttribute('data-fee');
+            const displayElement = document.getElementById('eventFeeDisplay');
+            if (fee !== null) {
+                if (parseFloat(fee) > 0) {
+                    displayElement.textContent = `Event Fee: $${parseFloat(fee).toFixed(2)}`;
+                } else {
+                    displayElement.textContent = `Event Fee: Free!`;
+                }
+            } else {
+                displayElement.textContent = '';
+            }
+        }
+
+        function showSubmitConfirmation() {
+            alert('Your registration request is being processed!');
+        }
+
+        function enlargeImage(img) {
+            const isEnlarged = img.dataset.enlarged === 'true';
+
+            if (isEnlarged) {
+                img.style.width = '180px';
+                img.style.height = '120px';
+                img.style.border = '3px solid #007bff';
+                img.dataset.enlarged = 'false';
+            } else {
+                img.style.width = '300px';
+                img.style.height = '200px';
+                img.style.border = '5px solid #28a745';
+                img.dataset.enlarged = 'true';
+            }
+        }
+
+        function countCharacters(textarea) {
+            const charCountSpan = document.getElementById('charCount');
+            charCountSpan.textContent = textarea.value.length;
+        }
+
+        // Task 7: Media Events JavaScript
+        function showVideoReadyMessage() {
+            const videoStatus = document.getElementById('videoStatus');
+            videoStatus.textContent = "Video ready to play! Enjoy this event preview.";
+            videoStatus.style.color = '#28a745'; // Green text
+        }
+
+        window.onbeforeunload = function() {
+            const form = document.getElementById('eventRegistrationForm');
+            let formModified = false;
+            const inputs = form.querySelectorAll('input:not([type="submit"]), select, textarea');
+            for (let i = 0; i < inputs.length; i++) {
+                if (inputs[i].value !== '') {
+                    formModified = true;
+                    break;
+                }
+            }
+            if (formModified) {
+                return 'You have unsaved changes in the form. Are you sure you want to leave?';
+            }
+        };
+    </script>
+</body>
+</html>

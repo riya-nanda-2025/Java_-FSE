@@ -1,0 +1,32 @@
+<!--Open index.html in Google Chrome.
+
+Open Chrome DevTools:
+
+Right-click anywhere on the page and select "Inspect" from the context menu.
+Alternatively, use the keyboard shortcut: Ctrl+Shift+I (Windows/Linux) or Cmd+Option+I (Mac).
+Use "Inspect Element" to modify styles:
+
+Go to the "Elements" tab in DevTools.
+Click on the "Select an element in the page to inspect it" icon (it looks like a small square with an arrow, usually in the top-left of the DevTools pane).
+Now, click on any element on your webpage (e.g., the "Local Community Event Portal" <h1> heading or the "Welcome, logged-in user!" banner).
+In the "Styles" pane (usually on the right side of the Elements tab), you can see and modify the CSS rules applied to that element.
+Try changing the background-color of #welcomeBanner or the font-size of h1.
+You can directly type new values, toggle properties on/off with checkboxes, or add new CSS properties. Observe how the changes appear live on your page. This is incredibly useful for quick styling experiments.
+Use the Console tab to view logs from your <script>:
+
+Click on the "Console" tab in DevTools.
+Any console.log(), console.warn(), or console.error() statements in your JavaScript will appear here. For instance, when you select an event type in the form, you'll see "Preferred event type saved: [value]" logged in the console. When you use the "Clear Preferences" button, you'll see "LocalStorage and SessionStorage cleared."
+You can also type JavaScript code directly into the console to test functions or inspect variables (e.g., type localStorage.getItem('preferredEventType') and press Enter).
+Add breakpoints in JS and reload the page to watch variable values:
+
+Go to the "Sources" tab in DevTools.
+In the left sidebar, navigate to your index.html file (it might be listed under top, localhost, or a specific file path).
+Find a JavaScript function you want to debug, for example, showConfirmation(event) or validatePhoneNumber(input).
+Click on the line number next to a line of code where you want the execution to pause (e.g., the line const fullName = form.fullName.value; inside showConfirmation). A blue marker will appear, indicating a breakpoint.
+Now, go back to your browser page and perform the action that triggers that JavaScript function (e.g., fill out and submit the registration form, or type an invalid phone number and click outside the field).
+The browser will pause execution at your breakpoint.
+On the right-hand side of the "Sources" tab, you'll see:
+Scope: This pane shows the values of all variables accessible in the current function's scope. You can expand objects (event, form) to see their properties.
+Watch: You can add specific variables (e.g., fullName, email) to the "Watch" pane to monitor their values as you step through the code.
+Call Stack: Shows the sequence of function calls that led to the current breakpoint.
+Use the controls at the top of the "Sources" pane (play/pause, step over, step into, step out) to execute your code line by line and observe how variable values change, helping you pinpoint logical errors.-->
